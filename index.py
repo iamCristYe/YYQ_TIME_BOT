@@ -24,7 +24,7 @@ def chat(message):
 🇭🇰 {datetime.now(SH).strftime(fmt)}
 🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
 
-    bot.send_message(-1001937998371, msg)
+    bot.send_message(message.chat.id, msg)
 
 
 # We use telegram_bot_key as the web hook route
@@ -52,8 +52,8 @@ def index():
 🇭🇰 {datetime.now(SH).strftime(fmt)}
 🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
 
-    bot.send_message(-1001937998371, msg)
-
+    bot.send_message(-1001937998371, msg)  # Channel
+    bot.send_message(-1001220309970, msg)  # Group
     return "我只是个报时器"
 
 
