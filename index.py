@@ -41,7 +41,7 @@ def index():
 🇩🇰 {datetime.now(Copenhagen).strftime(fmt)}
 🇭🇰 {datetime.now(SH).strftime(fmt)}
 🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
-    bot.send_message(-1937998371, msg)
+    bot.send_message(-1001937998371, msg)
     return "我只是个报时器"
 
 
