@@ -6,7 +6,7 @@ from pytz import timezone
 
 TELEGRAM_BOT_KEY = os.environ.get("telegram_bot_key")
 app = flask.Flask(__name__)
-bot = telebot.TeleBot(TG_BOT_KEY)
+bot = telebot.TeleBot(TELEGRAM_BOT_KEY)
 
 
 # non-command message
