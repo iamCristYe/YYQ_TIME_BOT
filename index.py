@@ -29,7 +29,7 @@ def getMessage():
 @app.route("/")
 def index():
     bot.remove_webhook()
-    bot.set_webhook(url=f"https://reverse-tg-bot.azurewebsites.net/{TELEGRAM_BOT_KEY}")
+    bot.set_webhook(url=f"https://tg-time-bot.azurewebsites.net/{TELEGRAM_BOT_KEY}")
 
     LA = timezone("America/Los_Angeles")
     Copenhagen = timezone("Europe/Copenhagen")
