@@ -13,8 +13,18 @@ bot = telebot.TeleBot(TELEGRAM_BOT_KEY)
 @bot.message_handler(commands=["start"])
 @bot.message_handler(func=lambda m: True)
 def chat(message):
-    msg = "我只是个报时器"
-    bot.send_message(message.chat.id, msg)
+    LA = timezone("America/Los_Angeles")
+    Copenhagen = timezone("Europe/Copenhagen")
+    SH = timezone("Asia/Shanghai")
+    Tokyo = timezone("Asia/Tokyo")
+    fmt = "%H:%M"
+
+    msg = f"""🇺🇸 {datetime.now(LA).strftime(fmt)}
+🇩🇰 {datetime.now(Copenhagen).strftime(fmt)}
+🇭🇰 {datetime.now(SH).strftime(fmt)}
+🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
+
+    bot.send_message(-1001937998371, msg)
 
 
 # We use telegram_bot_key as the web hook route
@@ -41,7 +51,9 @@ def index():
 🇩🇰 {datetime.now(Copenhagen).strftime(fmt)}
 🇭🇰 {datetime.now(SH).strftime(fmt)}
 🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
+
     bot.send_message(-1001937998371, msg)
+
     return "我只是个报时器"
 
 
