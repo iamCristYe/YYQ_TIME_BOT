@@ -54,7 +54,16 @@ def index():
 
     bot.send_message(-1001937998371, msg)  # Channel
     # bot.send_message(-1001220309970, msg)  # Group
-    return "我只是个报时器"
+    return f"""<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        document.location = "https://t.me/YYQ_TIME"
+    </script>
+</body>
+
+</html>"""
 
 
 if __name__ == "__main__":
