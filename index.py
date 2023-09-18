@@ -47,8 +47,7 @@ def index():
     Tokyo = timezone("Asia/Tokyo")
     fmt = "%H:%M"
 
-    msg = f"""🇺🇸 {datetime.now(LA).strftime(fmt)}
-🇩🇰 {datetime.now(Copenhagen).strftime(fmt)}
+    msg = f"""🇩🇰 {datetime.now(Copenhagen).strftime(fmt)}
 🇭🇰 {datetime.now(SH).strftime(fmt)}
 🇯🇵 {datetime.now(Tokyo).strftime(fmt)}"""
 
